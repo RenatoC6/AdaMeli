@@ -7,6 +7,8 @@ public class ForcaBruta {
 
     public static void main(String[] args) {
 
+        // CODIGO UTILIZANDO SENHA NUMERICA DE 4 DIGITOS
+
         Scanner numero = new Scanner(System.in);
         int pass = 0;
 
@@ -18,7 +20,7 @@ public class ForcaBruta {
             }
         }
 
-        double inicio = System.currentTimeMillis();
+        long inicio = System.currentTimeMillis();
 
         int numtentativas = 0;
 
@@ -32,8 +34,8 @@ public class ForcaBruta {
 
         System.out.println("numero de tentativas para encontrar o numero: " + numtentativas);
 
-        double fim = System.currentTimeMillis();
-        double tempo = fim - inicio;
+        long fim = System.currentTimeMillis();
+        long tempo = fim - inicio;
 
         System.out.println("Tempo percorrido na procura do numero: " + tempo + " milessegundos");
 

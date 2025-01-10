@@ -26,6 +26,8 @@ public class Forca {
         System.out.println("Voce tera " + qtdeTentativas + " tentativas para achar a palavra secreta ");
         System.out.println("Informe somente letras MAIUSCULAS");
 
+        // Formatacao das variaveis e principalemente os arrays
+
         String formLetras = "";
         String[] frutaSelecionada = new String[qtdeLetras];
         String[] letraAcertada = new String[qtdeLetras];
@@ -108,3 +110,7 @@ public class Forca {
         System.out.println("Forca preenchida: " + montaLetras);
     }
 }
+
+
+
+

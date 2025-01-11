@@ -24,7 +24,7 @@ public class Forca {
         System.out.println("Dicas:");
         System.out.println("A Palavra a ser descoberta é uma Fruta de " + qtdeLetras + " letras");
         System.out.println("Voce tera " + qtdeTentativas + " tentativas para achar a palavra secreta ");
-        System.out.println("Informe somente letras MAIUSCULAS");
+      //  System.out.println("Informe somente letras MAIUSCULAS");
 
         // Formatacao das variaveis e principalemente os arrays
 
@@ -53,7 +53,7 @@ public class Forca {
                System.out.println("---------------------------------------");
 
                System.out.println("Digite a letra da tentativa " + tentativas + ", e voce ainda terá " + (qtdeTentativas - tentativas) + " tentativas");
-               letra = sc.nextLine();
+               letra = sc.nextLine().toUpperCase();
 
                for (int j = 0; j < qtdeLetras; j++) {
 

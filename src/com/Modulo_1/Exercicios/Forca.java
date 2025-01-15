@@ -72,11 +72,8 @@ public class Forca {
                } else{
                    System.out.println("Essa letra NÃO existe na palavra secreta");
                    nAcertou++;
-
                }
                acertou1 = 0;
-
-               //montaLetras(letraAcertada, qtdeLetras); // metodo para montar a forca, a medida que as letras são digitadas
 
                tentativas++;
                tentativastotal = tentativas;

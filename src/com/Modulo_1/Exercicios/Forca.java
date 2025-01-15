@@ -165,7 +165,7 @@ public class Forca {
 
         if(nAcertou == 5  ){
             System.out.println( "|       0" );
-            System.out.println( "|      /|]" );
+            System.out.println( "|      /|\\" );
             System.out.println( "|       |" );
             System.out.println( "|" );
         }

@@ -1,13 +1,13 @@
 package com.Modulo_2.CalculadoraImcComPOO;
 
-public class IMC {
+class IMC {
     double imc;
 
     IMC(double imc) {
         this.imc = imc;
     }
 
-    public String getCategoria(Paciente p, IMC imc) {
+    String getCategoria(Paciente p, IMC imc) {
         if (p.idade < 18) {
             if (imc.imc < 16) {
                 return "Baixo peso";

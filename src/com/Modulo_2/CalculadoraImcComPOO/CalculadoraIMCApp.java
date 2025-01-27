@@ -1,6 +1,6 @@
 package com.Modulo_2.CalculadoraImcComPOO;
 
-public class CalculadoraIMCApp {
+class CalculadoraIMCApp {
     public static void main(String[] args) {
 
         // formata as entradas na linha de comando do terminal

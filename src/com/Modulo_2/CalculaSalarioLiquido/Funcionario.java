@@ -1,5 +1,6 @@
 package com.Modulo_2.CalculaSalarioLiquido;
 
+// TAD: Tipo abstrato  de Dados
 public class Funcionario {
 
     DadosPessoais dadosPessoais;

@@ -9,7 +9,6 @@ public class Funcionario {
     double calcularSalario(double salarioBase, boolean valeTransporte) {
 
         double valorDesconto;
-
         if (salarioBase <= 2000.00) {
             valorDesconto = salarioBase * 0.10;
         } else if (salarioBase > 2000.00 && salarioBase <= 5000.00) {

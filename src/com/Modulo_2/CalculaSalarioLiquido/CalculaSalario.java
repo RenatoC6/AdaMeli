@@ -31,6 +31,8 @@ public class CalculaSalario {
         f1.dadosPessoais = new DadosPessoais(nome, dataNascimento );
         f1.dadosContratuais = new DadosContratuais(cargo, salarioBase, valeTransporte);
 
+
+
         double valorDesconto = f1.calcularSalario(salarioBase, valeTransporte);
         //System.out.println("valor desconto: " + valorDesconto);
         double salarioLiquido = f1.calcularSalarioLiquido(salarioBase, valorDesconto);

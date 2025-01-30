@@ -1,7 +1,7 @@
 package com.Modulo_2.CalculaSalarioLiquido;
 
 
-public class CalculaSalario {
+public class AppCalcSal {
 
     public static void main(String[] args) {
 

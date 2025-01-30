@@ -6,16 +6,16 @@ public class CalculadoraSalario {
 
         double valorDesconto;
 
-        if (f1.dadosContratuais.salarioBase <= 2000.00) {
-            valorDesconto = f1.dadosContratuais.salarioBase * 0.10;
-        } else if (f1.dadosContratuais.salarioBase > 2000.00 && f1.dadosContratuais.salarioBase <= 5000.00) {
-            valorDesconto = f1.dadosContratuais.salarioBase * 0.15;
+        if (f1.dadosContratuais.salarioBase <= TabelaDeValoresDeDesconto.SALARIO_ESCALAO_1) {
+            valorDesconto = f1.dadosContratuais.salarioBase * TabelaDeValoresDeDesconto.DESCONTO_ESCALAO_1;
+        } else if (f1.dadosContratuais.salarioBase <= TabelaDeValoresDeDesconto.SALARIO_ESCALAO_2) {
+            valorDesconto = f1.dadosContratuais.salarioBase * TabelaDeValoresDeDesconto.DESCONTO_ESCALAO_2;
         } else {
-            valorDesconto = f1.dadosContratuais.salarioBase * 0.20;
+            valorDesconto = f1.dadosContratuais.salarioBase * TabelaDeValoresDeDesconto.DESCONTO_ESCALAO_3;
         }
 
-        if (f1.dadosContratuais.salarioBase <= 2000.00 && f1.dadosContratuais.valeTransporte == true) {
-            valorDesconto = valorDesconto + (f1.dadosContratuais.salarioBase * 0.06);
+        if (f1.dadosContratuais.salarioBase <= TabelaDeValoresDeDesconto.SALARIO_LIMITE_DESCONTO_VT && f1.dadosContratuais.valeTransporte == true) {
+            valorDesconto = valorDesconto + (f1.dadosContratuais.salarioBase * TabelaDeValoresDeDesconto.DESCONTO_VT);
         }
         return valorDesconto;
     }

@@ -32,10 +32,13 @@ public class CalculaSalario {
         f1.dadosContratuais = new DadosContratuais(cargo, salarioBase, valeTransporte);
 
 
+        CalculadoraSalario calc = new CalculadoraSalario();
+        double valorDesconto = calc.calcularSalario(f1);
+        double salarioLiquido = calc.calcularSalarioLiquido(salarioBase, valorDesconto);
 
-        double valorDesconto = f1.calcularSalario(salarioBase, valeTransporte);
+        //double valorDesconto = f1.calcularSalario(salarioBase, valeTransporte);
         //System.out.println("valor desconto: " + valorDesconto);
-        double salarioLiquido = f1.calcularSalarioLiquido(salarioBase, valorDesconto);
+        //double salarioLiquido = f1.calcularSalarioLiquido(salarioBase, valorDesconto);
 
         imprimir(f1.dadosPessoais, f1.dadosContratuais, salarioLiquido);
     }

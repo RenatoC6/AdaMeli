@@ -1,0 +1,17 @@
+//Abstração: focar no essencial, ignorando o irrelevante
+//Encapsulamento: esconder os detalhes. expondo apenas o essencial
+//Herança: reutilizar codigo, criando hierarquias de classes
+//Polimorfismo: responder a uma mensagem de maneiras diferentes
+
+// private: torna incacessivel um campo com (atributo) como um metodo
+//    para qualquer outra classe alem da mesma
+
+// privado de pacote (por omissão, quando não coloca nada): torna incacessivel um campo
+// com (atributo) como um metodo  para qualquer outra classe que esteja fora do
+// pacote da mesma
+
+// protected: torna incacessivel um campo (atributo) como um metodo
+// para qualquer outra classe que esteja fora do
+// pacote da mesma
+
+//public: libero geral.. mesmo fora do pacote

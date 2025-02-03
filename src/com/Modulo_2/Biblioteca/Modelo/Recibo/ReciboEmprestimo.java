@@ -1,4 +1,7 @@
-package com.Modulo_2.Biblioteca;
+package com.Modulo_2.Biblioteca.Modelo.Recibo;
+
+import com.Modulo_2.Biblioteca.Modelo.Livro;
+import com.Modulo_2.Biblioteca.Modelo.Locador;
 
 import java.time.LocalDateTime;
 

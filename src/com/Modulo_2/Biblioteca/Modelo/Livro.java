@@ -1,4 +1,4 @@
-package com.Modulo_2.Biblioteca;
+package com.Modulo_2.Biblioteca.Modelo;
 
 public class Livro {
 
@@ -12,7 +12,7 @@ public class Livro {
 
     String categoria;
 
-    RegraDeEmprestimo regraDeEmprestimo;
+    public RegraDeEmprestimo regraDeEmprestimo;
 
 
 }

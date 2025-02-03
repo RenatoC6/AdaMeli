@@ -1,4 +1,8 @@
-package com.Modulo_2.Biblioteca;
+package com.Modulo_2.Biblioteca.Modelo.Recibo;
+
+import com.Modulo_2.Biblioteca.Modelo.Livro;
+import com.Modulo_2.Biblioteca.Modelo.Locador;
+import com.Modulo_2.Biblioteca.Modelo.RegraDeEmprestimo;
 
 import java.time.LocalDateTime;
 
@@ -6,7 +10,7 @@ import java.time.LocalDateTime;
 
 public class ReciboEmprestimoFactory{
 
-    static ReciboEmprestimo criarRecibo(Livro livro, Locador locador) {
+    public static ReciboEmprestimo criarRecibo(Livro livro, Locador locador) {
         ReciboEmprestimo reciboEmprestimo = new ReciboEmprestimo(livro, locador);
         reciboEmprestimo.dataDeInicio = LocalDateTime.now();
         reciboEmprestimo.dataPrevistaDeDevolucao = gerarDataDevolucao(livro);

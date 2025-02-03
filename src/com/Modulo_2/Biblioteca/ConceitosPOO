@@ -3,6 +3,8 @@
 //Herança: reutilizar codigo, criando hierarquias de classes
 //Polimorfismo: responder a uma mensagem de maneiras diferentes
 
+Modificadores de acesso: private, protected, public
+
 // private: torna incacessivel um campo com (atributo) como um metodo
 //    para qualquer outra classe alem da mesma
 

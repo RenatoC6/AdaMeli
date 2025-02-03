@@ -19,6 +19,6 @@ public class ReciboEmprestimo {
 
     Locador locador;
 
-    LocalDateTime dataPrevistaDeDevolucao;
+    public LocalDateTime dataPrevistaDeDevolucao;
 
 }

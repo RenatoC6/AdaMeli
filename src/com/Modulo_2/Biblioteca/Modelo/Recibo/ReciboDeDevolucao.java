@@ -10,13 +10,13 @@ public class ReciboDeDevolucao {
 
     String observacao;
 
-    ReciboDeDevolucao(ReciboEmprestimo reciboEmprestimo, LocalDateTime dataDevolucao, String observacao) {
+    public ReciboDeDevolucao(ReciboEmprestimo reciboEmprestimo, LocalDateTime dataDevolucao, String observacao) {
         this.reciboEmprestimo = reciboEmprestimo;
         this.dataDevolucao = dataDevolucao;
         this.observacao = observacao;
     }
 
-    ReciboDeDevolucao(ReciboEmprestimo reciboEmprestimo, LocalDateTime dataDevolucao) {
+    public ReciboDeDevolucao(ReciboEmprestimo reciboEmprestimo, LocalDateTime dataDevolucao) {
         this.reciboEmprestimo = reciboEmprestimo;
         this.dataDevolucao = dataDevolucao;
     }

@@ -1,7 +1,7 @@
 package com.Modulo_2.Biblioteca.Modelo.Recibo;
 
+import com.Modulo_2.Biblioteca.Locador;
 import com.Modulo_2.Biblioteca.Modelo.Livro;
-import com.Modulo_2.Biblioteca.Modelo.Locador;
 
 import java.time.LocalDateTime;
 
@@ -12,7 +12,6 @@ public class ReciboEmprestimo {
         this.locador = locador;
     }
 
-
     LocalDateTime dataDeInicio;
 
     Livro livro;
@@ -20,5 +19,10 @@ public class ReciboEmprestimo {
     Locador locador;
 
     public LocalDateTime dataPrevistaDeDevolucao;
+
+
+
+
+
 
 }

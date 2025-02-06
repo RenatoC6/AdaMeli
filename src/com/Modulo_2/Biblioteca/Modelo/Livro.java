@@ -1,18 +1,50 @@
 package com.Modulo_2.Biblioteca.Modelo;
 
+import com.Modulo_2.Biblioteca.RegraDeEmprestimo;
+
 public class Livro {
 
-    String titulo;
+    private String titulo;
+    private String autor;
+    private String editora;
+    private Integer ano;
+    private String categoria;
+    private RegraDeEmprestimo regraDeEmprestimo;
 
-    String autor;
+    public Livro(String titulo, String autor, String editora, Integer ano, String categoria, RegraDeEmprestimo regraDeEmprestimo) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.editora = editora;
+        this.ano = ano;
+        this.categoria = categoria;
+        this.regraDeEmprestimo = regraDeEmprestimo;
+    }
 
-    String editora;
+    public String getTitulo(){
+        return this.titulo;
+    }
+    public String getAutor(){
+        return this.autor;
+    }
 
-    Integer ano;
+    public RegraDeEmprestimo getRegraDeEmprestimo(){
+        return this.regraDeEmprestimo;
+    }
 
-    String categoria;
+    public void setRegraDeEmprestimo(RegraDeEmprestimo regraDeEmprestimo){
+        this.regraDeEmprestimo = regraDeEmprestimo;
+    }
 
-    public RegraDeEmprestimo regraDeEmprestimo;
-
-
+    public String getEditora() {
+        return editora;
+    }
+    public Integer getAno() {
+        return ano;
+    }
+    public String getCategoria() {
+        return categoria;
+    }
 }
+
+
+

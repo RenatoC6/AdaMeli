@@ -1,8 +1,8 @@
 package com.Modulo_2.Biblioteca.Modelo.Recibo;
 
 import com.Modulo_2.Biblioteca.Modelo.Livro;
-import com.Modulo_2.Biblioteca.Modelo.Locador;
-import com.Modulo_2.Biblioteca.Modelo.RegraDeEmprestimo;
+import com.Modulo_2.Biblioteca.Locador;
+import com.Modulo_2.Biblioteca.RegraDeEmprestimo;
 
 import java.time.LocalDateTime;
 
@@ -18,11 +18,11 @@ public class ReciboEmprestimoFactory{
     }
     // private --> esse metodo só pode ser acessivel dentro dessa classe (regra de encapsulamento)
         private static LocalDateTime gerarDataDevolucao(Livro livro) {
-        if (livro.regraDeEmprestimo == RegraDeEmprestimo.CURTA_DURACAO) {
+        if (livro.getRegraDeEmprestimo() == RegraDeEmprestimo.CURTA_DURACAO) {
             return LocalDateTime.now().plusDays(1);
-        } else if (livro.regraDeEmprestimo == RegraDeEmprestimo.MEDIA_DURACAO) {
+        } else if (livro.getRegraDeEmprestimo() == RegraDeEmprestimo.MEDIA_DURACAO) {
             return LocalDateTime.now().plusDays(3);
-        } else if (livro.regraDeEmprestimo == RegraDeEmprestimo.LONGA_DURACAO) {
+        } else if (livro.getRegraDeEmprestimo() == RegraDeEmprestimo.LONGA_DURACAO) {
             return LocalDateTime.now().plusDays(7);
         }
 

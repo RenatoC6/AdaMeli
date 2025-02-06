@@ -1,4 +1,4 @@
-package com.Modulo_2.Biblioteca.Modelo;
+package com.Modulo_2.Biblioteca;
 
 public enum RegraDeEmprestimo {
 

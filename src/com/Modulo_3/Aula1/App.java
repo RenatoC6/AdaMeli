@@ -33,8 +33,8 @@ public class App {
       // como faço pra saber que o animal é do tipo cachorro ?
       // não preciso do metodo getAnimalAdotado (posso usar  "cuidador.getAnimal().getNome())";)
 
-        System.out.println("O cuidador " + cuidador.getNome() + " adotou  o " + tipoAnimal.toString() + " " + adotado.getRaca() + " " +  adotado.getNome());
-        System.out.println("O cuidador " + cuidador.getNome() + " adotou  o " + cuidador.getAnimal().getTipoAnimal() + " " + cuidador.getAnimal().getRaca() + " " + cuidador.getAnimal().getNome());
+        System.out.println("O cuidador " + cuidador.getNome() + " adotou o " + tipoAnimal.toString() + " " + adotado.getRaca() + " " +  adotado.getNome());
+        System.out.println("O cuidador " + cuidador.getNome() + " adotou o " + cuidador.getAnimal().getTipoAnimal() + " " + cuidador.getAnimal().getRaca() + " " + cuidador.getAnimal().getNome());
 
 
 

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/ada_t1321" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/com/Modulo_1/Exercicios/Workspace/Desenvolva" vcs="Git" />
   </component>
 </project>

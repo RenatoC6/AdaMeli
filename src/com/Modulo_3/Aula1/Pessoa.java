@@ -6,12 +6,12 @@ public class Pessoa {
     private String telefone;
     private Animal animal;
 
-    public void adotar(Animal animal){
-        if(animal.isDisponivelParaAdocao()){
+    public void adotar(Animal animal) {
+        if (animal.isDisponivelParaAdocao()) {
             this.animal = animal;
-            animal.setDisponivelParaAdocao(false);        }
+            animal.setDisponivelParaAdocao(false);
+        }
     }
-
 // isso é um construtor de Animal ???
     public Animal getAnimalAdotado(){
         return this.getAnimal();
@@ -38,7 +38,5 @@ public class Pessoa {
         return animal;
     }
 
-    public void setAnimal(Animal animal) {
-        this.animal = animal;
-    }
+
 }

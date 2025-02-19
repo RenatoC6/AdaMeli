@@ -7,6 +7,7 @@ public class Animal {
     private String cor;
     private boolean disponivelParaAdocao;
     TipoAnimal tipoAnimal;
+    AdotavelInterface adotavel;
 
     public TipoAnimal getTipoAnimal() {
         return tipoAnimal;
@@ -21,7 +22,7 @@ public class Animal {
     }
 
     public void emitirSom(){
-
+        System.out.println("emitindo som");
     }
 
     public String getRaca() {

@@ -11,7 +11,7 @@ public class Pedido {
     }
 
     public double calcularTotal(){
-        return  modalidade.calcularFrete(valorPedido);
+        return  this.valorPedido + modalidade.calcularFrete();
 
     }
 

@@ -9,3 +9,4 @@ public class CanetaImpl<T> implements Writer<T>{
 
     }
 }
+

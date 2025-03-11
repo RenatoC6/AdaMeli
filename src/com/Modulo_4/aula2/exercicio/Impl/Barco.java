@@ -33,3 +33,4 @@ public class Barco extends Automotive implements Mover, Flutuar, Velocidade {
         System.out.println("Barco diminuiu a velocidade");
     }
 }
+

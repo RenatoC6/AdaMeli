@@ -35,3 +35,4 @@ public class Pato implements Caminhar, Voar, Mover, Flutuar, Velocidade {
         System.out.println("Pato voando");
     }
 }
+

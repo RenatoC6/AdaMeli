@@ -4,3 +4,4 @@ public interface ReaderByName<T> {
 
     T read(String nome);
 }
+

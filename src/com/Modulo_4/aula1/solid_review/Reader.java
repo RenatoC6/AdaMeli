@@ -6,3 +6,4 @@ public interface Reader<T> {
 
     List<T> read();
 }
+

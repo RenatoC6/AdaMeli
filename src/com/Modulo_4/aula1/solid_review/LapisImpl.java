@@ -8,3 +8,4 @@ public class LapisImpl<T> implements Writer<T>{
 
     }
 }
+

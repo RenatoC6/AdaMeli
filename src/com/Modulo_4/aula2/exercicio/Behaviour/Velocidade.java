@@ -6,3 +6,4 @@ public interface Velocidade {
 
     void diminuir(float value);
 }
+

@@ -1,9 +1,7 @@
 package com.Modulo_4.aula2.datetime;
 
-import java.time.DayOfWeek;
-import java.time.Duration;
-import java.time.LocalDate;
-import java.time.LocalTime;
+import java.time.*;
+import java.time.format.DateTimeFormatter;
 
 public class DateTime {
 
@@ -23,6 +21,17 @@ public class DateTime {
         var spentTime = Duration.between(first, second);
         System.out.println("Já se passaram " + spentTime.toHours() + ":"
                 + spentTime.toMinutesPart() + " horas");
+        // dd - day
+        // MM - mes
+        // mm - minutos
+        // hh - hora AM
+        // HH - hora PM
+        // yy - year
+
+        var formatter = DateTimeFormatter.ofPattern("dd-MM-yy hh:mm");
+        var currantDate = LocalDateTime.now();
+        System.out.println(formatter.format(currantDate));
+
     }
 
     public static void installments(int amount, int dueDay) {

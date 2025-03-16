@@ -6,7 +6,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.function.Function;
 
 
-public class MainFunc {
+public class MainFunction {
 
 
 

@@ -2,13 +2,11 @@ package com.Modulo_4.aula4.exercicio.funcao;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.function.Function;
-import java.util.function.IntFunction;
 
 
-public class MainFunction {
+public class MainFunc {
 
 
 

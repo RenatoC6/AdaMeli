@@ -26,7 +26,7 @@ public class MainFunction {
         // escreva um conversor para o tipo LocalDate
         // Deve ser utilizado a interface Function
 
-         DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yy");
+        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yy");
 
         Function<String, LocalDate> dateConverter = (texto) -> LocalDate.parse(texto, dateFormatter);
 

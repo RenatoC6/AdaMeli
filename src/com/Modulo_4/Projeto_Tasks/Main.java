@@ -117,6 +117,7 @@ public class Main {
         int opcao = sc.nextInt();
         sc.nextLine();
 
+
         switch (opcao) {
             case 1:
                 statusNovo = StatusTarefa.PENDENTE;

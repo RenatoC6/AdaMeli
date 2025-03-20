@@ -28,7 +28,7 @@ public class MainFunction {
 
         DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yy");
 
-        Function<String, LocalDate> dateConverter = (texto) -> LocalDate.parse(texto, dateFormatter);
+        Function<String, LocalDate> dateConverter = (dateAsString) -> LocalDate.parse(dateAsString, dateFormatter);
 
         var date = dateConverter.apply("14/03/25");
 

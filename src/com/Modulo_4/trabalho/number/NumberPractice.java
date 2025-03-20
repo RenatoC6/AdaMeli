@@ -1,9 +1,7 @@
 package com.Modulo_4.trabalho.number;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class NumberPractice {
 
@@ -11,8 +9,12 @@ public class NumberPractice {
 
     public List<Integer> numbersLessThan5() {
         // Filtre todos os números que são menores que 5
-        Arrays.stream(NUMBERS);
+        Arrays.stream(NUMBERS)
+          .filter(number -> number <5)
+          .collect(Collectors.toList());
+
         return null;
+
     }
 
     public Set<Integer> removeRepeatNumbers() {

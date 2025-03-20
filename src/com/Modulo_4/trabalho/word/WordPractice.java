@@ -4,6 +4,7 @@ package com.Modulo_4.trabalho.word;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class WordPractice {
 
@@ -11,21 +12,27 @@ public class WordPractice {
 
     public List<String> wordsLessThan5Characters() {
         //Filtre apenas palavras que possuem menos de 5 caracteres
-        Arrays.stream(WORDS);
-        return null;
+        List<String> wordLessFive = Arrays.stream(WORDS)
+                .filter(word -> word.length() < 5)
+                .collect(Collectors.toList());
 
+        return wordLessFive;
     }
-
     public List<String> words5Characters() {
         // Filtre apenas palavras que possuem 5 caracteres
-        Arrays.stream(WORDS);
-        return null;
+        List<String> wordFive = Arrays.stream(WORDS)
+                .filter(words -> words.length() == 5)
+                .collect(Collectors.toList());
+        return wordFive;
+
     }
 
     public List<String> wordsGreaterThan5Characters() {
         // Filtre apenas palavras que possuem mais de 5 caracteres
-        Arrays.stream(WORDS);
-        return null;
+        List<String> wordThanFive = Arrays.stream(WORDS)
+                .filter(words -> words.length() > 5)
+                .collect(Collectors.toList());
+        return wordThanFive;
     }
 
     public List<String> wordsArePalindromes() {

@@ -4,6 +4,7 @@ package com.Modulo_4.trabalho.word;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class WordPractice {
@@ -37,23 +38,34 @@ public class WordPractice {
 
     public List<String> wordsArePalindromes() {
         // Identifique e retorne as palavras que sejam palíndromos(são iguais de trás para frente, exemplo: Radar)
-        Arrays.stream(WORDS);
-        return null;
+        List<String> palindromes = Arrays.stream(WORDS)
+                .filter(word -> word.equalsIgnoreCase(new StringBuilder(word).reverse().toString()))
+                .collect(Collectors.toList());
+
+        return palindromes;
     }
 
     public Map<String, Integer> countLetterEachWord() {
         //EXTRA
         //Calcule quantos caracteres cada palavra têm, o retorno deve ser a palavra -> quantidade de carateres. Exemplo: Osso -> 4
-        Arrays.stream(WORDS);
-        return null;
+        Map<String, Integer> caractersWord = Arrays.stream(WORDS)
+                .collect(Collectors.toMap(
+                        Function.identity(),
+                        String::length
+                ));
+
+        return caractersWord;
     }
 
 
     public Integer countLettersAllWordHave() {
         // EXTRA
         // Calcule quantos caracteres tem todas as palavras têm juntas.
-        Arrays.stream(WORDS);
-        return null;
+        Integer lettersAllWord = Arrays.stream(WORDS)
+                .mapToInt(String::length)
+                .sum();
+
+        return lettersAllWord;
     }
 
 }

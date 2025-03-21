@@ -15,21 +15,19 @@ public class NumberPractice {
                 .filter(number -> number < 5)
                 .collect(Collectors.toList());
        return numbersLessFive;
-
     }
 
     public Set<Integer> removeRepeatNumbers() {
         // Remova os números repetidos
-        Set<Integer> numbersHash = Arrays.stream(NUMBERS)
+        Set<Integer> numbersDistinct = Arrays.stream(NUMBERS)
                 .collect(Collectors.toSet());
-        return numbersHash;
+        return numbersDistinct;
     }
 
     public Integer sumAllNumbers() {
         // Calcule a soma total dos números.
         Integer sum = Arrays.stream(NUMBERS)
                 .reduce(0, (a, b) -> a + b);
-
         return sum;
     }
 
@@ -39,7 +37,6 @@ public class NumberPractice {
                 .distinct()
                 .mapToInt(Integer::intValue)
                 .sum();
-
         return somaSemRepetidos;
     }
 
@@ -51,7 +48,6 @@ public class NumberPractice {
                         Function.identity(),
                         Collectors.counting()
                 ));
-
         return result;
     }
 

@@ -1,5 +1,6 @@
 package com.Modulo_4.Projeto_Tasks;
 
+
 import java.time.DateTimeException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -9,56 +10,56 @@ public class Main {
 
     public static void main(String[] args) {
 
-    GerenciadorDeTarefas gerenciador = new GerenciadorDeTarefasImpl();
+        GerenciadorDeTarefas gerenciador = new GerenciadorDeTarefasImpl();
 
-    while (true){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("                                          ");
-        System.out.println("============= MENU TAREFAS ===============");
-        System.out.println("1. Cadastrar tarefa");
-        System.out.println("2. Filtrar e Listar tarefas por Status");
-        System.out.println("3. Alterar Status da Tarefa");
-        System.out.println("4. Listar tarefas Ordenadas por data Limite");
-        System.out.println("5. Sair");
-        System.out.print("==> Digite a opção desejada: ");
+        while (true){
+            Scanner sc = new Scanner(System.in);
+            System.out.println("                                          ");
+            System.out.println("============= MENU TAREFAS ===============");
+            System.out.println("1. Cadastrar tarefa");
+            System.out.println("2. Filtrar e Listar tarefas por Status");
+            System.out.println("3. Alterar Status da Tarefa");
+            System.out.println("4. Listar tarefas Ordenadas por data Limite");
+            System.out.println("5. Sair");
+            System.out.print("==> Digite a opção desejada: ");
 
-        int opcao = sc.nextInt();
-        sc.nextLine();
-        switch (opcao) {
-            case 1:
-                Tarefa tarefa = cadastrarTarefa();
-                gerenciador.InserirTarefaLista(tarefa);
-                System.out.println("*** Tarefa cadastrada com sucesso !!! ***");
-                break;
-            case 2:
-                StatusTarefa statusNovo = listarTarefasStatus();
-                if(statusNovo != null){
-                    gerenciador.listarTarefasPorStatus(statusNovo);
-                }
-                break;
-            case 3:
-                System.out.print("Digite o título da tarefa que deseja alterar o status: ");
-                String tituloAlterar = sc.nextLine();
-                boolean isTarefa = gerenciador.buscarTarefaPorTitulo(tituloAlterar);
-
-                if(isTarefa) {
-                    System.out.println("==> Digite o novo status da tarefa: ");
-                    StatusTarefa novoStatus = listarTarefasStatus();
-                    if (novoStatus != null) {
-                        gerenciador.alterarStatusTarefa(tituloAlterar, novoStatus);
+            int opcao = sc.nextInt();
+            sc.nextLine();
+            switch (opcao) {
+                case 1:
+                    Tarefa tarefa = cadastrarTarefa();
+                    gerenciador.InserirTarefaLista(tarefa);
+                    System.out.println("*** Tarefa cadastrada com sucesso !!! ***");
+                    break;
+                case 2:
+                    StatusTarefa statusNovo = listarTarefasStatus();
+                    if(statusNovo != null){
+                        gerenciador.listarTarefasPorStatus(statusNovo);
                     }
-                }
-                break;
-            case 4:
-                gerenciador.listarTarefasOrdenadas();
-                break;
-            case 5:
-                System.out.println("Saindo...");
-                return;
-            default:
-                System.out.println("*** Opção inválida! **");
+                    break;
+                case 3:
+                    System.out.print("Digite o título da tarefa que deseja alterar o status: ");
+                    String tituloAlterar = sc.nextLine();
+                    boolean isTarefa = gerenciador.buscarTarefaPorTitulo(tituloAlterar);
+
+                    if(isTarefa) {
+                        System.out.println("==> Digite o novo status da tarefa: ");
+                        StatusTarefa novoStatus = listarTarefasStatus();
+                        if (novoStatus != null) {
+                            gerenciador.alterarStatusTarefa(tituloAlterar, novoStatus);
+                        }
+                    }
+                    break;
+                case 4:
+                    gerenciador.listarTarefasOrdenadas();
+                    break;
+                case 5:
+                    System.out.println("Saindo...");
+                    return;
+                default:
+                    System.out.println("*** Opção inválida! **");
+            }
         }
-    }
     }
 
     public static Tarefa cadastrarTarefa() {
@@ -117,7 +118,6 @@ public class Main {
         int opcao = sc.nextInt();
         sc.nextLine();
 
-
         switch (opcao) {
             case 1:
                 statusNovo = StatusTarefa.PENDENTE;
@@ -136,4 +136,3 @@ public class Main {
     }
 
 }
-

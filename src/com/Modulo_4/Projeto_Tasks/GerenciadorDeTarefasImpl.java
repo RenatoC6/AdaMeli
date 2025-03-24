@@ -1,7 +1,10 @@
 package com.Modulo_4.Projeto_Tasks;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class GerenciadorDeTarefasImpl implements GerenciadorDeTarefas {
 
@@ -11,7 +14,6 @@ public class GerenciadorDeTarefasImpl implements GerenciadorDeTarefas {
         this.tarefas = new ArrayList<>();
     }
 
-
     @Override
     public void InserirTarefaLista(Tarefa tarefa) {
         tarefas.add(tarefa);
@@ -19,16 +21,15 @@ public class GerenciadorDeTarefasImpl implements GerenciadorDeTarefas {
 
     @Override
     public void alterarStatusTarefa(String titulo, StatusTarefa novoStatus) {
-        for (Tarefa tarefas : tarefas) {
-            if (tarefas.getTitulo().equals(titulo)) {
-                tarefas.setStatusTarefa(novoStatus);
-                System.out.println("Status da tarefa alterado com sucesso!");
-                return;
-            }
-        }
-        System.out.println("*** Tarefa não encontrada! ***");
+        tarefas.stream()
+                .filter(t -> t.getTitulo().equalsIgnoreCase(titulo))
+                .findFirst()
+                .ifPresentOrElse(t -> {
+                            t.setStatusTarefa(novoStatus);
+                            System.out.println("Status da tarefa alterado com sucesso!");
+                        },
+                        () -> System.out.println("*** Tarefa não encontrada! ***"));
     }
-
 
     @Override
     public void listarTarefasOrdenadas() {
@@ -38,16 +39,24 @@ public class GerenciadorDeTarefasImpl implements GerenciadorDeTarefas {
 
     }
 
+
     @Override
     public void listarTarefasPorStatus(StatusTarefa statusNovo) {
-        int count = 0;
         System.out.println("Tarefas com status " + statusNovo + ":");
-        for (Tarefa tarefa : tarefas) {
-            if (tarefa.getStatusTarefa() == statusNovo) {
-                System.out.println(tarefa);
-                count += 1;
-            }
-         }
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yy");
+
+        long count = tarefas.stream()
+                .filter(t -> t.getStatusTarefa() == statusNovo)
+                .peek(t -> {
+                    String dataLimiteTexto = t.getDataLimite().format(formatter);
+                    System.out.println("Tarefa: " + t.getTitulo() +
+                            " Descricao: " + t.getDescricao() +
+                            " Data Limite: " + dataLimiteTexto +
+                            " Status: " + t.getStatusTarefa());
+                })
+                .count();
+
         if (count == 0) {
             System.out.println("*** Não existem tarefas com esse status: " + statusNovo);
         }
@@ -55,19 +64,20 @@ public class GerenciadorDeTarefasImpl implements GerenciadorDeTarefas {
 
     @Override
     public boolean buscarTarefaPorTitulo(String titulo) {
+        List<Tarefa> encontradas = tarefas.stream()
+                .filter(t -> t.getTitulo().equalsIgnoreCase(titulo))
+                .collect(Collectors.toList());
 
-        boolean isTarefa = false;
-
-        for (Tarefa tarefas : tarefas) {
-            if (tarefas.getTitulo().equals(titulo)) {
-                System.out.println("#### Tarefa: " + tarefas.getTitulo() + " Status: " + tarefas.getStatusTarefa());
-                isTarefa = true;
-            } else {
-                System.out.println("*** Tarefa não encontrada!");
-            }
+        if (encontradas.isEmpty()) {
+            System.out.println("*** Tarefa não encontrada!");
+            return false;
         }
-        return isTarefa;
 
+        encontradas.forEach(t ->
+                System.out.println("#### Tarefa: " + t.getTitulo() +
+                        " Status: " + t.getStatusTarefa()));
+
+        return true;
     }
 
 }
